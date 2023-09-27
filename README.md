@@ -1,6 +1,9 @@
 # Github Action Vulnerabilities
+1. NOTE: The github action in this repo is the patched workflow.
+2. Below shows both the vulnerable action and patched action
+   
 ## Code Injection
-1. Vulnerable Action
+1. Vulnerable Action - Allow user to perform code injection via Issue Title and Issue Description
     ```yaml
     name: Demo vulnerable workflow
 
