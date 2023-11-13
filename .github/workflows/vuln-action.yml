@@ -23,7 +23,7 @@ jobs:
           TITLE: ${{github.event.issue.title}}
           DESCRIPTION: ${{github.event.issue.body}}
           
-      - run: |
+        run: |
           echo "ISSUE TITLE: $TITLE"
           echo "ISSUE DESCRIPTION: $DESCRIPTION"
 
