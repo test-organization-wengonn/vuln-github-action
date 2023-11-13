@@ -32,7 +32,7 @@ jobs:
           DESCRIPTION: ${{github.event.issue.body}}
           
         run: |
-          echo "ISSUE TITLE: env.TITLE"
-          echo "ISSUE DESCRIPTION: env.DESCRIPTION"
+          echo "ISSUE TITLE: ${{ env.TITLE }}"
+          echo "ISSUE DESCRIPTION: ${{ env.DESCRIPTION }}"
 
 
