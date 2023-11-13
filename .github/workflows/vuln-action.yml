@@ -13,12 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     # Checkout used for demonstration purposes
       - uses: actions/checkout@v2
-    
-      # - run: |
-      #    echo "ISSUE TITLE: ${{github.event.issue.title}}"
-      #    echo "ISSUE DESCRIPTION: ${{github.event.issue.body}}"
       - env:
           TITLE: ${{github.event.issue.title}}
           DESCRIPTION: ${{github.event.issue.body}}
@@ -27,6 +22,17 @@ jobs:
           echo "ISSUE TITLE: $TITLE"
           echo "ISSUE DESCRIPTION: $DESCRIPTION"
 
+  vuln_job_2:
+    runs-on: ubuntu-latest
 
-      # - run: |
-      #    curl -X POST -H "Authorization: Token ${{ secrets.BOT_TOKEN }}" -d '{"labels": ["New Issue"]}' ${{ github.event.issue.url }}/labels
+    steps:
+      - uses: actions/checkout@v2
+      - env:
+          TITLE: ${{github.event.issue.title}}
+          DESCRIPTION: ${{github.event.issue.body}}
+          
+        run: |
+          echo "ISSUE TITLE: env.TITLE"
+          echo "ISSUE DESCRIPTION: env.DESCRIPTION"
+
+
